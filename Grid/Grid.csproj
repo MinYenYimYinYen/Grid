@@ -46,6 +46,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -72,12 +74,986 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Database\account.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\action.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\actrea.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\actstat.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\adjacent.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\adjcarr.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\adjcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\adjrea.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\adjust.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\alarm.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\alarmsch.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\appext.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\appextdata.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\appmethod.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\attacat.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\attach.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\attachxmldata.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\attempt.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\auditlog.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\backup_custflag.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\backup_customer.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\backup_program.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BaitStation.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BaitStationActivity.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BaitStationActivityNoSrvRea.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BaitStationActivityProdUsed.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BaitStationActivityServCond.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\BaitStationType.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\batch.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\bkp_custflag.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\bkp_flag.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\blockld.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\budget.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\callcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\calltopic.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CallTracking.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\cancelcat.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\cancode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\carrier.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\carrzip.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_account.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_action.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_actreas.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_actstat.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_adjcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_attacat.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_attempt.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_auditlog.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_batch.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_budget.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_callcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_cancode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_carrzip.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_cawautopayinstque.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_collcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_company.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_companyaging.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_compcond.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_compdisc.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_completr.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_compprep.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_compprg.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_comppric.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_compprod.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_compserv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_compsrce.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_comptax.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_condcat.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_condcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_contpay.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_contract.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_crrteprg.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_csswautopayque.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_custflag.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_custinv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_custltr.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_customer.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_dbversion.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_disccode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_doneby.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_employee.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_flag.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_franchisefees.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_histhist.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_history.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_holdcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_invoice.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_langmess.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_letters.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_location.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_markcust.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_market.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_mastcat.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_paytype.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_prepay.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_prepcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_prepserv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_prgmcd.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_prgmserv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_pricetab.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_pricrang.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_prodcat.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_prodcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_prodused.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_program.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_progtype.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_propinv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_region.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_rejcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_route.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_salemsg.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_saleserv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_servcd.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_servcond.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_servhist.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_service.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_servprod.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_servstat.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_servtax.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_setupprm.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_source.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_subdiv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_suffix.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_taxid.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_title.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_unitcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_vehicle.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ca_zipcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\collcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\collhist.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\compadj.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\company.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CompanyAging.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CompanyDownTime.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CompBaitStationType.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\compcond.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\compdisc.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\compest.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\compfav.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\completr.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ComponentVersion.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ComponentVersionHist.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CompPackage.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\compprep.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\compprg.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\comppric.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\compprod.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\compprop.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\compsale.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\compserv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\compservmess.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\compsrce.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\comptax.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\condcat.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\condcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\contpay.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\contract.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\county.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\crew.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\crewmemb.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\crrteprg.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\custflag.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\custinv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\custinvgeographyshape.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\custltr.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\customer.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CustomerGeographyShape.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CustomerSizeGeographyShape.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\disccode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\doneby.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\donebyen.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\dontcall.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\dupcust.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\employee.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\errorlog.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\estform.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\estimate.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\faq.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\favgroup.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\favorite.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\flag.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\franchisefee.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\gcstatmap.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GeographyShape.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\GeographyShapeHistory.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\histhist.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\history.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\HistorySignature.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\holdcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IBase_Dups.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\imptemp.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\invoice.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\key.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\langmess.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\letter.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\location.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\mapcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\markcust.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MarkCustGeographyShape.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MarkCustSizeGeographyShape.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\market.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\mastcat.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\nosrvrea.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Package.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\payment.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PaymentSignature.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\paytype.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PI_ActiveCustomers.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PI_CustomerStatus.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PI_Done2004.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PI_JulyPriceIncrease.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PI_NewSales.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PI_PDCustomers.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PI_RemPrepay.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\planwk.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ppayserv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\precust.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\prenot.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\prepay.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\prepcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\prepserv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\prgmcd.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PrgmCdPackage.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\prgmserv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\pricetab.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\pricrang.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\prodcat.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\prodcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\prodcond.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\prodentr.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\prodtax.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ProductCodeVehicle.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ProductCondHistory.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ProductCondition.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ProductCondJournal.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ProductLocationHistory.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ProductLocationJournal.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\prodused.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\produsen.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\progcond.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\program.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ProgramCustomerSignature.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\progtype.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\propinct.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\propinv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\QuickText.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\QuickTextCompany.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\QuickTextLog.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RALog.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\region.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\rejcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\repprod.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\reptrak.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\route.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\routprog.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\routtrak.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\rptparam.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\rpt_Employee_Access.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\rpt_Group_Access.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\rtdetail.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SADBContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SADBContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SADBContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SADBContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SADBContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\salemsg.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\saleserv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\secStringDetail.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\secucode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SentriconSetup.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\servcd.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ServcdBaitstationtype.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\servcond.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\servhist.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\service.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ServiceCustomerSignature.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ServiceEmployeeSignature.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\servprod.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\servstat.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\servtax.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\setupprm.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sigkey.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Signature.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sigpoint.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\slscustcarr.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SLSDataArchiveUtilityErrorLog.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SLSDataArchiveUtilityMarketingTable.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SLSDataArchiveUtilityMasterDeleteAfterInsert.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SLSDataArchiveUtilityMasterTable.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SLSDataArchiveUtilityMasterTablesDelete.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SLSDataArchiveUtilityTransactionTable.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\source.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SQL01_SinceDateSoldDate.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\srvnosrv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SS_failed_email.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SS_jobs_transaction_log.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SS_srv_log.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\statemnt.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\subassy.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\subdiv.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\suffix.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\taxid.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\tblNCE_Send_01.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\tblProvidence.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\TempCustPriceBlend.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\tempsumacct.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Temp_IBase.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Temp_IBase_Dups.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\terrcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\timewindow.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\title.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\tmdetail.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\tmheader.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\topic.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\unitcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\unitofmeasure.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\UserSetting.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\utiltrak.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\vehicle.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\vehodom.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\vendor.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\vendord.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\zipcode.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\zone.cs">
+      <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Block.cs" />
+    <Compile Include="Models\Territory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -95,6 +1071,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Database\SADBContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SADBContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database\SADBContext.edmx.diagram">
+      <DependentUpon>SADBContext.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -103,6 +1086,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\SADBContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SADBContext.edmx</DependentUpon>
+      <LastGenOutput>SADBContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\SADBContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SADBContext.edmx</DependentUpon>
+      <LastGenOutput>SADBContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

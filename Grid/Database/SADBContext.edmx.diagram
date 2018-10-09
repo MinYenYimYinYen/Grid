@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1473c7d3be204a099dae3be854e1ea80" Name="Diagram1">
+        <EntityTypeShape EntityType="HOL010SAModel.account" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.action" Width="1.5" PointX="13.75" PointY="96.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.actrea" Width="1.5" PointX="16.75" PointY="73.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.actstat" Width="1.5" PointX="11.5" PointY="87.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.adjacent" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.adjcarr" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.adjcode" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.adjrea" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.adjust" Width="1.5" PointX="10.75" PointY="73.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.alarm" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.alarmsch" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.appext" Width="1.5" PointX="2.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.appextdata" Width="1.5" PointX="5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.appmethod" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.attacat" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.attach" Width="1.5" PointX="10.75" PointY="78.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.attachxmldata" Width="1.5" PointX="13" PointY="79.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.attempt" Width="1.5" PointX="19" PointY="92.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.auditlog" Width="1.5" PointX="10.75" PointY="83.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.BaitStation" Width="1.5" PointX="16.75" PointY="96.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.BaitStationActivity" Width="1.5" PointX="22" PointY="93.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.BaitStationActivityNoSrvRea" Width="1.5" PointX="24.25" PointY="94.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.BaitStationActivityProdUsed" Width="1.5" PointX="25.75" PointY="110.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.BaitStationActivityServCond" Width="1.5" PointX="25.75" PointY="114.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.BaitStationType" Width="1.5" PointX="14.5" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.batch" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.blockld" Width="1.5" PointX="10.75" PointY="92.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.budget" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_account" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_action" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_actreas" Width="1.5" PointX="11.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_actstat" Width="1.5" PointX="11.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_adjcode" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_attacat" Width="1.5" PointX="11.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_attempt" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_auditlog" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_batch" Width="1.5" PointX="4.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_budget" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_callcode" Width="1.5" PointX="6.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_cancode" Width="1.5" PointX="8.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_carrzip" Width="1.5" PointX="13.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_cawautopayinstque" Width="1.5" PointX="13.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_collcode" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_company" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_companyaging" Width="1.5" PointX="15.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_compcond" Width="1.5" PointX="15.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_compdisc" Width="1.5" PointX="15.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_completr" Width="1.5" PointX="10.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_compprep" Width="1.5" PointX="15.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_compprg" Width="1.5" PointX="12.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_comppric" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_compprod" Width="1.5" PointX="2.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_compserv" Width="1.5" PointX="4.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_compsrce" Width="1.5" PointX="6.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_comptax" Width="1.5" PointX="16.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_condcat" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_condcode" Width="1.5" PointX="17.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_contpay" Width="1.5" PointX="17.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_contract" Width="1.5" PointX="17.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_crrteprg" Width="1.5" PointX="17.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_csswautopayque" Width="1.5" PointX="8.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_custflag" Width="1.5" PointX="10.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_custinv" Width="1.5" PointX="12.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_custltr" Width="1.5" PointX="14.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_customer" Width="1.5" PointX="18.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_dbversion" Width="1.5" PointX="16.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_disccode" Width="1.5" PointX="18.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_doneby" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_employee" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_flag" Width="1.5" PointX="2.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_franchisefees" Width="1.5" PointX="19.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_histhist" Width="1.5" PointX="4.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_history" Width="1.5" PointX="19.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_holdcode" Width="1.5" PointX="19.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_invoice" Width="1.5" PointX="19.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_langmess" Width="1.5" PointX="20.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_letters" Width="1.5" PointX="20.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_location" Width="1.5" PointX="21.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_markcust" Width="1.5" PointX="21.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_market" Width="1.5" PointX="21.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_mastcat" Width="1.5" PointX="6.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_paytype" Width="1.5" PointX="8.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_prepay" Width="1.5" PointX="21.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_prepcode" Width="1.5" PointX="10.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_prepserv" Width="1.5" PointX="21.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_prgmcd" Width="1.5" PointX="12.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_prgmserv" Width="1.5" PointX="14.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_pricetab" Width="1.5" PointX="16.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_pricrang" Width="1.5" PointX="18.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_prodcat" Width="1.5" PointX="20.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_prodcode" Width="1.5" PointX="0.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_prodused" Width="1.5" PointX="2.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_program" Width="1.5" PointX="22.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_progtype" Width="1.5" PointX="22.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_propinv" Width="1.5" PointX="22.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_region" Width="1.5" PointX="23.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_rejcode" Width="1.5" PointX="23.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_route" Width="1.5" PointX="23.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_salemsg" Width="1.5" PointX="23.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_saleserv" Width="1.5" PointX="23.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_servcd" Width="1.5" PointX="4.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_servcond" Width="1.5" PointX="6.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_servhist" Width="1.5" PointX="8.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_service" Width="1.5" PointX="10.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_servprod" Width="1.5" PointX="12.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_servstat" Width="1.5" PointX="14.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_servtax" Width="1.5" PointX="24.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_setupprm" Width="1.5" PointX="16.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_source" Width="1.5" PointX="24.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_subdiv" Width="1.5" PointX="18.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_suffix" Width="1.5" PointX="20.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_taxid" Width="1.5" PointX="24.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_title" Width="1.5" PointX="22.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_unitcode" Width="1.5" PointX="24.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_vehicle" Width="1.5" PointX="25.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ca_zipcode" Width="1.5" PointX="0.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.callcode" Width="1.5" PointX="6.25" PointY="70" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.calltopic" Width="1.5" PointX="22" PointY="98.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.CallTracking" Width="1.5" PointX="13.75" PointY="92" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.cancelcat" Width="1.5" PointX="25.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.cancode" Width="1.5" PointX="6.25" PointY="74.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.carrier" Width="1.5" PointX="25.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.carrzip" Width="1.5" PointX="25.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.collcode" Width="1.5" PointX="6.25" PointY="77.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.collhist" Width="1.5" PointX="10.75" PointY="99.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.compadj" Width="1.5" PointX="26.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.company" Width="1.5" PointX="0.75" PointY="93.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.CompanyAging" Width="1.5" PointX="3" PointY="91.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.CompanyDownTime" Width="1.5" PointX="3" PointY="96.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.CompBaitStationType" Width="1.5" PointX="3" PointY="100.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.compcond" Width="1.5" PointX="26.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.compdisc" Width="1.5" PointX="26.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.compest" Width="1.5" PointX="26.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.compfav" Width="1.5" PointX="26.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.completr" Width="1.5" PointX="27.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ComponentVersion" Width="1.5" PointX="2.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ComponentVersionHist" Width="1.5" PointX="27.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.CompPackage" Width="1.5" PointX="6" PointY="101.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.compprep" Width="1.5" PointX="4.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.compprg" Width="1.5" PointX="27.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.comppric" Width="1.5" PointX="6.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.compprod" Width="1.5" PointX="8.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.compprop" Width="1.5" PointX="27.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.compsale" Width="1.5" PointX="10.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.compserv" Width="1.5" PointX="2.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.compservmess" Width="1.5" PointX="5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.compsrce" Width="1.5" PointX="12.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.comptax" Width="1.5" PointX="14.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.condcat" Width="1.5" PointX="12.25" PointY="54" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.condcode" Width="1.5" PointX="23.5" PointY="136.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.contpay" Width="1.5" PointX="16.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.contract" Width="1.5" PointX="10.75" PointY="102.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.county" Width="1.5" PointX="6.25" PointY="82" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.crew" Width="1.5" PointX="18.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.crewmemb" Width="1.5" PointX="20.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.crrteprg" Width="1.5" PointX="22.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.custflag" Width="1.5" PointX="10.75" PointY="107.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.custinv" Width="1.5" PointX="13.75" PointY="103.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.custinvgeographyshape" Width="1.5" PointX="16" PointY="108.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.custltr" Width="1.5" PointX="10.75" PointY="114.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.customer" Width="1.5" PointX="8.5" PointY="83.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.CustomerGeographyShape" Width="1.5" PointX="10.75" PointY="96.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.CustomerSizeGeographyShape" Width="1.5" PointX="16.75" PointY="93.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.disccode" Width="1.5" PointX="6.25" PointY="85" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.doneby" Width="1.5" PointX="23.5" PointY="108.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.donebyen" Width="1.5" PointX="28.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.dontcall" Width="1.5" PointX="28.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.dupcust" Width="1.5" PointX="28.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.employee" Width="1.5" PointX="6.25" PointY="104.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.errorlog" Width="1.5" PointX="28.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.estform" Width="1.5" PointX="29.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.estimate" Width="1.5" PointX="21.25" PointY="104.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.faq" Width="1.5" PointX="29.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.favgroup" Width="1.5" PointX="29.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.favorite" Width="1.5" PointX="24.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.flag" Width="1.5" PointX="0.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.franchisefee" Width="1.5" PointX="2.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.gcstatmap" Width="1.5" PointX="29.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.GeographyShape" Width="1.5" PointX="14.5" PointY="87.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.GeographyShapeHistory" Width="1.5" PointX="16.75" PointY="88.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.histhist" Width="1.5" PointX="23.5" PointY="111.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.history" Width="1.5" PointX="10.75" PointY="124.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.HistorySignature" Width="1.5" PointX="13" PointY="127" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.holdcode" Width="1.5" PointX="6.25" PointY="91.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.IBase_Dups" Width="1.5" PointX="4.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.imptemp" Width="1.5" PointX="10.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.invoice" Width="1.5" PointX="10.75" PointY="132.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.key" Width="1.5" PointX="30.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.langmess" Width="1.5" PointX="12.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.letter" Width="1.5" PointX="14.5" PointY="72.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.location" Width="1.5" PointX="14.5" PointY="111.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.mapcode" Width="1.5" PointX="30.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.markcust" Width="1.5" PointX="11.5" PointY="60.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.MarkCustGeographyShape" Width="1.5" PointX="19.75" PointY="75.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.MarkCustSizeGeographyShape" Width="1.5" PointX="19.75" PointY="72.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.market" Width="1.5" PointX="30.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.mastcat" Width="1.5" PointX="20.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.nosrvrea" Width="1.5" PointX="22" PointY="90.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.Package" Width="1.5" PointX="3.75" PointY="107" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.payment" Width="1.5" PointX="10.75" PointY="137" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.PaymentSignature" Width="1.5" PointX="13" PointY="137.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.paytype" Width="1.5" PointX="6.25" PointY="119.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.PI_ActiveCustomers" Width="1.5" PointX="30.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.PI_CustomerStatus" Width="1.5" PointX="30.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.PI_Done2004" Width="1.5" PointX="30.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.PI_JulyPriceIncrease" Width="1.5" PointX="30.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.PI_NewSales" Width="1.5" PointX="31.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.PI_PDCustomers" Width="1.5" PointX="31.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.PI_RemPrepay" Width="1.5" PointX="31.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.planwk" Width="1.5" PointX="31.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ppayserv" Width="1.5" PointX="23.5" PointY="114.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.precust" Width="1.5" PointX="10.75" PointY="141.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.prenot" Width="1.5" PointX="30.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.prepay" Width="1.5" PointX="10.75" PointY="144.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.prepcode" Width="1.5" PointX="6.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.prepserv" Width="1.5" PointX="32.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.prgmcd" Width="1.5" PointX="16.75" PointY="61.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.PrgmCdPackage" Width="1.5" PointX="19" PointY="84.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.prgmserv" Width="1.5" PointX="32.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.pricetab" Width="1.5" PointX="14.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.pricrang" Width="1.5" PointX="16.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.prodcat" Width="1.5" PointX="12.25" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.prodcode" Width="1.5" PointX="23.5" PointY="160.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.prodcond" Width="1.5" PointX="32.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.prodentr" Width="1.5" PointX="23.5" PointY="117.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.prodtax" Width="1.5" PointX="32.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ProductCodeVehicle" Width="1.5" PointX="26.5" PointY="132.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ProductCondHistory" Width="1.5" PointX="25.75" PointY="126.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ProductCondition" Width="1.5" PointX="25.75" PointY="138.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ProductCondJournal" Width="1.5" PointX="25.75" PointY="70.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ProductLocationHistory" Width="1.5" PointX="25.75" PointY="123.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ProductLocationJournal" Width="1.5" PointX="16.75" PointY="56.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.prodused" Width="1.5" PointX="23.5" PointY="124.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.produsen" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.progcond" Width="1.5" PointX="32.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.program" Width="1.5" PointX="19" PointY="97.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ProgramCustomerSignature" Width="1.5" PointX="24.25" PointY="104.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.progtype" Width="1.5" PointX="32.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.propinct" Width="1.5" PointX="32.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.propinv" Width="1.5" PointX="32.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.QuickText" Width="1.5" PointX="0.75" PointY="106.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.QuickTextCompany" Width="1.5" PointX="3" PointY="103.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.QuickTextLog" Width="1.5" PointX="3" PointY="111.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.RALog" Width="1.5" PointX="3" PointY="175.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.region" Width="1.5" PointX="33.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.rejcode" Width="1.5" PointX="16.75" PointY="112" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.repprod" Width="1.5" PointX="33.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.reptrak" Width="1.5" PointX="33.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.route" Width="1.5" PointX="5.25" PointY="95.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.routprog" Width="1.5" PointX="8.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.routtrak" Width="1.5" PointX="26.5" PointY="118.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.rptparam" Width="1.5" PointX="18.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.rtdetail" Width="1.5" PointX="20.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.salemsg" Width="1.5" PointX="26.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.saleserv" Width="1.5" PointX="2.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.secucode" Width="1.5" PointX="34.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.SentriconSetup" Width="1.5" PointX="10.75" PointY="147.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.servcd" Width="1.5" PointX="14.5" PointY="61.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ServcdBaitstationtype" Width="1.5" PointX="19.75" PointY="60.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.servcond" Width="1.5" PointX="23.5" PointY="133.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.servhist" Width="1.5" PointX="26.5" PointY="101.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.service" Width="1.5" PointX="21.25" PointY="115.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ServiceCustomerSignature" Width="1.5" PointX="28.5" PointY="123.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.ServiceEmployeeSignature" Width="1.5" PointX="28.5" PointY="126.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.servprod" Width="1.5" PointX="34.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.servstat" Width="1.5" PointX="19" PointY="115.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.servtax" Width="1.5" PointX="34.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.setupprm" Width="1.5" PointX="19" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.sigkey" Width="1.5" PointX="34.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.Signature" Width="1.5" PointX="22" PointY="86.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.sigpoint" Width="1.5" PointX="22.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.source" Width="1.5" PointX="6.25" PointY="123.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.srvnosrv" Width="1.5" PointX="23.5" PointY="150.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.SS_failed_email" Width="1.5" PointX="3" PointY="178.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.SS_jobs_transaction_log" Width="1.5" PointX="16.75" PointY="103.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.SS_srv_log" Width="1.5" PointX="28.5" PointY="110.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.statemnt" Width="1.5" PointX="10.75" PointY="159.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.subassy" Width="1.5" PointX="34.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.subdiv" Width="1.5" PointX="6.25" PointY="127.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.suffix" Width="1.5" PointX="34.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.taxid" Width="1.5" PointX="34.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.terrcode" Width="1.5" PointX="6.25" PointY="130.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.timewindow" Width="1.5" PointX="35.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.title" Width="1.5" PointX="6.25" PointY="134.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.tmdetail" Width="1.5" PointX="23.5" PointY="156.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.tmheader" Width="1.5" PointX="35.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.topic" Width="1.5" PointX="19.75" PointY="89.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.unitcode" Width="1.5" PointX="6.25" PointY="137" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.unitofmeasure" Width="1.5" PointX="4" PointY="137.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.UserSetting" Width="1.5" PointX="34.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.utiltrak" Width="1.5" PointX="8.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.vehicle" Width="1.5" PointX="24.25" PointY="99" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.vehodom" Width="1.5" PointX="36.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.vendor" Width="1.5" PointX="10.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.vendord" Width="1.5" PointX="36.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.zipcode" Width="1.5" PointX="12.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.zone" Width="1.5" PointX="14.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.backup_custflag" Width="1.5" PointX="36.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.backup_customer" Width="1.5" PointX="36.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.backup_program" Width="1.5" PointX="28.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.bkp_custflag" Width="1.5" PointX="30.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.bkp_flag" Width="1.5" PointX="37.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.rpt_Employee_Access" Width="1.5" PointX="0.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.rpt_Group_Access" Width="1.5" PointX="2.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.secStringDetail" Width="1.5" PointX="37.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.slscustcarr" Width="1.5" PointX="4.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.SLSDataArchiveUtilityErrorLog" Width="1.5" PointX="21.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.SLSDataArchiveUtilityMarketingTable" Width="1.5" PointX="23.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.SLSDataArchiveUtilityMasterDeleteAfterInsert" Width="1.5" PointX="38.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.SLSDataArchiveUtilityMasterTable" Width="1.5" PointX="38.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.SLSDataArchiveUtilityMasterTablesDelete" Width="1.5" PointX="38.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.SLSDataArchiveUtilityTransactionTable" Width="1.5" PointX="38.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.SQL01_SinceDateSoldDate" Width="1.5" PointX="38.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.tblNCE_Send_01" Width="1.5" PointX="38.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.tblProvidence" Width="1.5" PointX="38.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.Temp_IBase" Width="1.5" PointX="38.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.Temp_IBase_Dups" Width="1.5" PointX="32.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.TempCustPriceBlend" Width="1.5" PointX="38.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOL010SAModel.tempsumacct" Width="1.5" PointX="38.75" PointY="36.75" IsExpanded="true" />
+        <AssociationConnector Association="HOL010SAModel.FK_Action_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Action_Mcust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Action_status" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Attempt_action_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Calltopic_action_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Attempt_actreasid" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Setupprm_actreasid" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_797" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Adjust_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Appextdata_appextid" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Attach_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_695" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Attempt_emp_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_auditlog_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_BaitStation_BaitStationTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_BaitStation_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_BaitStation_Loc_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_BaitStationActivity_BaitStationID" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_BaitStationActivity_Service_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_BaitStationActivityNoSrvReas_BaitStationActivityID" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_BaitStationActivityProdUsed_BaitStationActivityID" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_755" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_BaitStationActivityNoSrvReas_NoSrvID" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_BaitStationActivityProdUsed_ProdUsedID" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_767" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_BaitStationType_CondCatID" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_BaitStationType_ProdCatID" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_CompBaitStationType_BaitStationTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_765" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Blockld_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Callahead" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Program_Callahead" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Service_Callahead" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Calltopic_Topic_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_782" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_783" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Cancode" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Program_Cancode" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Collect_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Collhist_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_CompBaitStationType_Comp_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Comp_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_698" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_737" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_740" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_741" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_785" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_787" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_790" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_793" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_792" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_713" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_701" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_727" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_728" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Contract_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Program_Contractid" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Countycd" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Custflag_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Custinv_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_692" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_693" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_694" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Custltr_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Program_Custltrid" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_B_Title_cd" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Cancelby" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Cardtype" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Disccode" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Holdcode" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Route" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Sourcecd" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Subdiv_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Terrcode" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Title_cd" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Customer_Unitcode" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_History_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Invoice_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Payment_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Precust_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Prepay_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Program_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Servhist_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Statemnt_Cust_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_678" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_680" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_763" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_786" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_679" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_681" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Program_Disccode" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Service_Disccode" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_796" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Doneby_Service_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_696" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Estimate_Prog_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_677" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_684" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_685" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Histhist_Service_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_775" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_774" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Program_Holdcode" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Service_Invoice_No" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_723" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_724" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_682" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_683" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_789" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_794" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_773" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_772" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Ppayserv_Service_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Service_Prepayid" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Program_Progdefid" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_733" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_795" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_702" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_771" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Prodentr_Service_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_770" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_721" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_719" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_726" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_725" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Prodused_Service_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Program_Rejcode" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Program_Sourcecd" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Service_Prog_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_781" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_780" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_697" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_699" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Routtrak_Service_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_732" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Service_Serv_Code" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_764" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Servcond_Service_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Servhist_Service_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Service_Servstatus" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Srvnosrv_Service_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.FK_Tmdetail_Service_id" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_776" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_777" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_791" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_778" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_779" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.Relation_691" ManuallyRouted="false" />
+        <AssociationConnector Association="HOL010SAModel.CompanyDownTimeRoute" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
