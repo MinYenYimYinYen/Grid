@@ -644,6 +644,21 @@
     <Compile Include="Database\IBase_Dups.cs">
       <DependentUpon>SADBContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\IMCDBContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IMCDBContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IMCDBContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IMCDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\IMCDBContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IMCDBContext.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Database\imptemp.cs">
       <DependentUpon>SADBContext.tt</DependentUpon>
     </Compile>
@@ -820,6 +835,9 @@
     </Compile>
     <Compile Include="Database\RALog.cs">
       <DependentUpon>SADBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Record.cs">
+      <DependentUpon>IMCDBContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\region.cs">
       <DependentUpon>SADBContext.tt</DependentUpon>
@@ -1075,6 +1093,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SADBContext.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="Database\IMCDBContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>IMCDBContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database\IMCDBContext.edmx.diagram">
+      <DependentUpon>IMCDBContext.edmx</DependentUpon>
+    </None>
     <None Include="Database\SADBContext.edmx.diagram">
       <DependentUpon>SADBContext.edmx</DependentUpon>
     </None>
@@ -1085,9 +1110,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database\IMCDBContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IMCDBContext.edmx</DependentUpon>
+      <LastGenOutput>IMCDBContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\IMCDBContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IMCDBContext.edmx</DependentUpon>
+      <LastGenOutput>IMCDBContext.cs</LastGenOutput>
+    </Content>
     <Content Include="Database\SADBContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SADBContext.edmx</DependentUpon>
