@@ -10,13 +10,71 @@ namespace Grid.Models
 {
 	public class Territory
 	{
-		public Location TopLeft { get; set; }
-		public Location BottomRight { get; set; }
+		private Location topLeft;
+		public Location TopLeft
+		{
+			get
+			{
+				if (topLeft == null)
+				{
+					var sa = MainWindow.sa;
+					var top = sa.markcusts.Select(m => m.latitude).Max();
+					var left = sa.markcusts.Select(m => m.longitude).Min();
+					return new Location
+					{
+						Latitude = (double)top,
+						Longitude = (double)left
+					};
+				}
+				return topLeft;
+			}
+			set => topLeft = value;
+		}
 
-		public int DivLat { get; set; }
-		public int DivLon { get; set; }
+		private Location bottomRight;
+		public Location BottomRight
+		{
+			get
+			{
+				if (bottomRight == null)
+				{
+					var sa = MainWindow.sa;
+					var bottom = sa.markcusts.Select(m => m.latitude).Min();
+					var right = sa.markcusts.Select(m => m.longitude).Max();
+					return new Location
+					{
+						Latitude = (double)bottom,
+						Longitude = (double)right
+					};
+				}
+				return bottomRight;
+			}
+			set => bottomRight = value;
+		}
 
-		public ObservableCollection<Block> Blocks;
+		private int divLat;
+		public int DivLat
+		{
+			get
+			{
+				if (divLat < 1) return 1;
+				return divLat;
+			}
+			set => divLat = value;
+		}
+
+		private int divLon;
+		public int DivLon
+		{
+			get
+			{
+				if (divLon <1) return 1;
+				return divLon;
+			}
+			set => divLon = value;
+		}
+
+		//public ObservableCollection<Block> Blocks { }
 
 	}
 }
