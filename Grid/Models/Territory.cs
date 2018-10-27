@@ -60,7 +60,11 @@ namespace Grid.Models
 				if (divLat < 1) return 1;
 				return divLat;
 			}
-			set => divLat = value;
+			set
+			{
+				divLat = value;
+
+			}
 		}
 
 		private int divLon;
@@ -68,13 +72,42 @@ namespace Grid.Models
 		{
 			get
 			{
-				if (divLon <1) return 1;
+				if (divLon < 1) return 1;
 				return divLon;
 			}
 			set => divLon = value;
 		}
 
-		//public ObservableCollection<Block> Blocks { }
+
+		public ObservableCollection<Block> blocks;
+		public ObservableCollection<Block> Blocks
+		{
+			get
+			{
+				blocks = new ObservableCollection<Block>();
+				var vert = TopLeft.Latitude - bottomRight.Latitude;
+				var hori = topLeft.Longitude - bottomRight.Longitude;
+				for (int i = 0; i < DivLon + 1; i++)
+				{
+					for (int j = 0; j < DivLat; j++)
+					{
+						blocks.Add(new Block
+						{
+							TopLeftOfBlock = new Location
+							{
+								Longitude = topLeft.Longitude + (i * hori / DivLon),
+								Latitude = topLeft.Latitude + (j * vert / divLat)
+							},
+							BottomRightOfBlock = new Location
+							{
+								Longitude = topLeft.Longitude + ((i + 1) * hori / DivLon),
+								Latitude = topLeft.Latitude + ((j + 1) * vert / divLat)
+							}
+						});
+					}
+				}
+				return blocks;			}
+		}
 
 	}
 }

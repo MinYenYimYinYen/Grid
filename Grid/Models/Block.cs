@@ -10,7 +10,8 @@ namespace Grid.Models
 {
 	public class Block
 	{
-		public Location TopLeft { get; set; }
-		public Location BottomRight { get; set; }
+		public Location topLeftOfBlock;
+		public Location TopLeftOfBlock { get; set; }
+		public Location BottomRightOfBlock { get; set; }
 	}
 }
