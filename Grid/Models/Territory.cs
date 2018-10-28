@@ -17,7 +17,7 @@ namespace Grid.Models
 			{
 				if (topLeft == null)
 				{
-					var sa = MainWindow.sa;
+					var sa = Brain.sa;
 					var top = sa.markcusts.Select(m => m.latitude).Max();
 					var left = sa.markcusts.Select(m => m.longitude).Min();
 					return new Location
@@ -38,7 +38,7 @@ namespace Grid.Models
 			{
 				if (bottomRight == null)
 				{
-					var sa = MainWindow.sa;
+					var sa = Brain.sa;
 					var bottom = sa.markcusts.Select(m => m.latitude).Min();
 					var right = sa.markcusts.Select(m => m.longitude).Max();
 					return new Location
@@ -50,6 +50,18 @@ namespace Grid.Models
 				return bottomRight;
 			}
 			set => bottomRight = value;
+		}
+
+		public Location Center
+		{
+			get
+			{
+				return new Location
+				{
+					Latitude = (TopLeft.Latitude + BottomRight.Latitude) / 2,
+					Longitude = (TopLeft.Longitude + BottomRight.Longitude) / 2
+				};
+			}
 		}
 
 		private int divLat;
@@ -106,7 +118,8 @@ namespace Grid.Models
 						});
 					}
 				}
-				return blocks;			}
+				return blocks;
+			}
 		}
 
 	}

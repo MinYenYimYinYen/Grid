@@ -6,9 +6,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Grid"
         xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        xmlns:b="clr-namespace:Grid.Models"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow"
+        Height="350"
+        Width="525">
+    <Window.Resources>
+        <b:Brain x:Key="Brain" />
+    </Window.Resources>
+    <Grid DataContext="{StaticResource Brain}">
+        <m:Map CredentialsProvider="Atu4AQp2CNh0a2jeTlH3PwPWtCV-DyjxvTL2f4k2COQmV6407he4vlP2aJw9fZju"
+               ZoomLevel="16"
+               Center="{Binding Path=HOL010.Center}">
+            
+        </m:Map>
     </Grid>
 </Window>

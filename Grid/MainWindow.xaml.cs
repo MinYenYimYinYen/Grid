@@ -24,8 +24,8 @@ namespace Grid
 		{
 			InitializeComponent();
 		}
-		public static Database.SADBContext sa = new Database.SADBContext();
-		public static Database.IMCDBContext imc = new Database.IMCDBContext();
+
+
 
 	}
 }
