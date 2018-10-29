@@ -64,13 +64,6 @@ namespace Grid.Models
 				return x;
 			}
 		}
-		public string CenterString
-		{
-			get
-			{
-				return $"{Center.Latitude.ToString()},{Center.Longitude.ToString()}";
-			}
-		}
 
 		private int divLat;
 		public int DivLat

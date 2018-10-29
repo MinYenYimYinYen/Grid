@@ -18,6 +18,6 @@
         <m:Map Name="MainMap"
             CredentialsProvider="Atu4AQp2CNh0a2jeTlH3PwPWtCV-DyjxvTL2f4k2COQmV6407he4vlP2aJw9fZju"
                ZoomLevel="16"
-               Center="{Binding Path=HOL010.CenterString}"></m:Map>
+               Center="{Binding Path=HOL010.Center}"></m:Map>
     </Grid>
 </Window>
