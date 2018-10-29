@@ -15,10 +15,9 @@
         <b:Brain x:Key="Brain" />
     </Window.Resources>
     <Grid DataContext="{StaticResource Brain}">
-        <m:Map CredentialsProvider="Atu4AQp2CNh0a2jeTlH3PwPWtCV-DyjxvTL2f4k2COQmV6407he4vlP2aJw9fZju"
+        <m:Map Name="MainMap"
+            CredentialsProvider="Atu4AQp2CNh0a2jeTlH3PwPWtCV-DyjxvTL2f4k2COQmV6407he4vlP2aJw9fZju"
                ZoomLevel="16"
-               Center="{Binding Path=HOL010.Center}">
-            
-        </m:Map>
+               Center="{Binding Path=HOL010.CenterString}"></m:Map>
     </Grid>
 </Window>

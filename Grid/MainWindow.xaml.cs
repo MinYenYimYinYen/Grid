@@ -23,6 +23,7 @@ namespace Grid
 		public MainWindow()
 		{
 			InitializeComponent();
+			MessageBox.Show(MainMap.Center.Latitude.ToString());
 		}
 
 

@@ -17,9 +17,9 @@ namespace Grid.Models
 			{
 				if (topLeft == null)
 				{
-					var sa = Brain.sa;
-					var top = sa.markcusts.Select(m => m.latitude).Max();
-					var left = sa.markcusts.Select(m => m.longitude).Min();
+					var top =  Brain.LiveRecords.Select(l => l.Latitude).Max();
+					var left = Brain.LiveRecords.Select(l => l.Longitude).Min();
+
 					return new Location
 					{
 						Latitude = (double)top,
@@ -39,8 +39,8 @@ namespace Grid.Models
 				if (bottomRight == null)
 				{
 					var sa = Brain.sa;
-					var bottom = sa.markcusts.Select(m => m.latitude).Min();
-					var right = sa.markcusts.Select(m => m.longitude).Max();
+					var bottom = Brain.LiveRecords.Select(l => l.Latitude).Min();
+					var right =   Brain.LiveRecords.Select(l => l.Longitude).Max();
 					return new Location
 					{
 						Latitude = (double)bottom,
@@ -56,11 +56,19 @@ namespace Grid.Models
 		{
 			get
 			{
-				return new Location
+				var x= new Location
 				{
 					Latitude = (TopLeft.Latitude + BottomRight.Latitude) / 2,
 					Longitude = (TopLeft.Longitude + BottomRight.Longitude) / 2
 				};
+				return x;
+			}
+		}
+		public string CenterString
+		{
+			get
+			{
+				return $"{Center.Latitude.ToString()},{Center.Longitude.ToString()}";
 			}
 		}
 
