@@ -2,13 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Grid.Models
 {
-	public class Territory
+	public class Territory:INotifyPropertyChanged
 	{
 		private Location topLeft;
 		public Location TopLeft
@@ -76,7 +77,7 @@ namespace Grid.Models
 			set
 			{
 				divLat = value;
-
+				OnPropertyChanged(nameof(DivLat));
 			}
 		}
 
@@ -88,11 +89,18 @@ namespace Grid.Models
 				if (divLon < 1) return 1;
 				return divLon;
 			}
-			set => divLon = value;
+			set
+			{
+				divLon = value;
+				OnPropertyChanged(nameof(DivLon));
+			}
 		}
 
 
 		public ObservableCollection<Block> blocks;
+
+		
+
 		public ObservableCollection<Block> Blocks
 		{
 			get
@@ -123,5 +131,10 @@ namespace Grid.Models
 			}
 		}
 
+		public event PropertyChangedEventHandler PropertyChanged;
+		public void OnPropertyChanged(string propertyName)
+		{
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+		}
 	}
 }

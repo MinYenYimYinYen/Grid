@@ -9,6 +9,13 @@ namespace Grid.Models
 {
 	public class Brain
 	{
+		public Brain()
+		{
+			ApplyLatDivisions = new Command(_ApplyLatDivisions, TrueAlways);
+			ApplyLatDivisions = new Command(_ApplyLonDivisions, TrueAlways);
+		}
+
+
 		public static Database.SADBContext sa = new Database.SADBContext();
 		public static Database.IMCDBContext imc = new Database.IMCDBContext();
 		private static ObservableCollection<LiveRecord> liveRecords;
@@ -49,6 +56,20 @@ namespace Grid.Models
 				}
 				return hol010;
 			}
+		}
+
+		public bool TrueAlways(object obj) { return true; }
+
+		public Command ApplyLatDivisions { get; set; }
+		private void _ApplyLatDivisions(object obj)
+		{
+
+		}
+
+		public Command ApplyLonDivisions { get; set; }
+		private void _ApplyLonDivisions(object obj)
+		{
+
 		}
 	}
 }

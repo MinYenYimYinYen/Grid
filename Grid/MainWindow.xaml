@@ -15,9 +15,41 @@
         <b:Brain x:Key="Brain" />
     </Window.Resources>
     <Grid DataContext="{StaticResource Brain}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <WrapPanel Name="wp_Top">
+            <StackPanel Name="sp_Divisions">
+                <WrapPanel>
+                    <Label Content="Vertical Divisions:"
+                           Width="125" />
+                    <TextBox Width="25"
+                             Text="{Binding Path=HOL010.DivLon}" />
+                    <Button Name="btn_ApplyVertDivisions"
+                            Content="Apply" 
+                            Command="{Binding Path=ApplyLatDivisions}"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label Content="Horizontal Divisions:"
+                           Width="125" />
+                    <TextBox Width="25" 
+                             Text="{Binding Path=HOL010.DivLat}" />
+                    <Button Name="btn_ApplyHoriDivisions"
+                            Content="Apply"
+                            Command="{Binding Path=ApplyLonDivisions}"/>
+                </WrapPanel>
+            </StackPanel>
+            <StackPanel Name="sp_DivisionsButton">
+   
+            </StackPanel>
+        </WrapPanel>
         <m:Map Name="MainMap"
-            CredentialsProvider="Atu4AQp2CNh0a2jeTlH3PwPWtCV-DyjxvTL2f4k2COQmV6407he4vlP2aJw9fZju"
+               Grid.Row="1"
+               CredentialsProvider="Atu4AQp2CNh0a2jeTlH3PwPWtCV-DyjxvTL2f4k2COQmV6407he4vlP2aJw9fZju"
                ZoomLevel="16"
-               Center="{Binding Path=HOL010.Center}"></m:Map>
+               Center="{Binding Path=HOL010.Center}">
+
+        </m:Map>
     </Grid>
 </Window>
