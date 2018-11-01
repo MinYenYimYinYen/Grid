@@ -14,7 +14,7 @@ namespace Grid.Models
 			Status = customer.status;
 			Latitude = customer.latitude != null ? (double)customer.latitude : 0;
 			Longitude = customer.longitude != null ? (double)customer.longitude : 0;
-
+			Size = customer.size != null ? (double)customer.size : 0;
 		}
 		public LiveRecord(Database.markcust markcust)
 		{
@@ -22,12 +22,13 @@ namespace Grid.Models
 			Status = "0";
 			Latitude = markcust.latitude != null ? (double)markcust.latitude : 0;
 			Longitude = markcust.longitude != null ? (double)markcust.longitude : 0;
+			Size = markcust.size != null ? (double)markcust.size : 0;
 		}
 
 		public int Cust_No { get; set; }
 		public string Status { get; set; }
 		public double Latitude { get; set; }
 		public double Longitude { get; set; }
-
+		public double Size { get; set; }
 	}
 }

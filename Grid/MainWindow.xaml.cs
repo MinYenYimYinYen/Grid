@@ -1,18 +1,10 @@
-﻿using Microsoft.Maps.MapControl.WPF;
+﻿using Grid.Models;
+using Microsoft.Maps.MapControl.WPF;
 using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Grid
 {
@@ -24,9 +16,220 @@ namespace Grid
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			//MapPolygon polygon = new MapPolygon();
+			//polygon.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Blue);
+			//polygon.Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Green);
+			//polygon.StrokeThickness = 5;
+			//polygon.Opacity = 0.7;
+			//polygon.Locations = new LocationCollection() {
+			//	new Location(47.6424,-122.3219),
+			//	new Location(47.8424,-122.1747),
+			//	new Location(47.5814,-122.1747)};
+
+			//MainMap.Children.Add(polygon);
 		}
 
 
+		public static Database.SADBContext sa = new Database.SADBContext();
+		public static Database.IMCDBContext imc = new Database.IMCDBContext();
+		private static ObservableCollection<LiveRecord> liveRecords;
+		public static ObservableCollection<LiveRecord> LiveRecords
+		{
+			get
+			{
+				if (liveRecords == null)
+				{
+					liveRecords = new ObservableCollection<LiveRecord>();
+
+					//Add Live Records for customer table where latitude is valid
+					foreach (var rec in sa.customers
+						.Where(c => c.latitude != 0 && c.latitude != null && c.longitude != 0 && c.longitude != null))
+					{
+						liveRecords.Add(new LiveRecord(rec));
+					}
+
+					//And again for markcust table
+					foreach (var rec in sa.markcusts
+						.Where(c => c.latitude != 0 && c.latitude != null && c.longitude != 0 && c.longitude != null))
+					{
+						liveRecords.Add(new LiveRecord(rec));
+					}
+				}
+				return liveRecords;
+			}
+		}
+
+
+		private double? latTop;
+		public double LatTop
+		{
+			get
+			{
+				if (latTop == null)
+				{
+					var x = LiveRecords
+						.Where(r => r.Status == "9")
+						.Select(r => r.Latitude)
+						.Max();
+					latTop = x;
+				}
+				return (double)latTop;
+			}
+		}
+
+		private double? latBottom;
+		public double LatBottom
+		{
+			get
+			{
+				if (latBottom == null)
+				{
+					var x = LiveRecords
+						.Where(r => r.Status == "9")
+						.Select(r => r.Latitude)
+						.Min();
+					latBottom = x;
+				}
+				return (double)latBottom;
+			}
+		}
+
+		private double? lonLeft;
+		public double LonLeft
+		{
+			get
+			{
+				if (lonLeft == null)
+				{
+					var x = LiveRecords
+						.Where(r => r.Status == "9")
+						.Select(r => r.Longitude)
+						.Min();
+					lonLeft = x;
+				}
+				return (double)lonLeft;
+			}
+		}
+
+		private double? lonRight;
+		public double LonRight
+		{
+			get
+			{
+				if (lonRight == null)
+				{
+					var x = LiveRecords
+						.Where(r => r.Status == "9")
+						.Select(r => r.Longitude)
+						.Max();
+					lonRight = x;
+				}
+				return (double)lonRight;
+			}
+		}
+
+		public double LatCenter { get => (LatTop + LatBottom) / 2; }
+		public double LonCenter { get => (LonLeft + LonRight) / 2; }
+
+		public Location Center
+		{
+			get => new Location
+			{
+				Latitude = LatCenter,
+				Longitude = LonCenter
+			};
+		}
+
+		private int divLat;
+		public int DivLat
+		{
+			get
+			{
+				if (divLat < 0) return 0;
+				return divLat;
+			}
+			set
+			{
+				divLat = value;
+
+			}
+		}
+		public int SectLat { get => DivLat + 1; }
+
+		private int divLon;
+		public int DivLon
+		{
+			get
+			{
+				if (divLon < 0) return 0;
+				return divLon;
+			}
+			set
+			{
+				divLon = value;
+			}
+		}
+
+		public double TopPercent { get; set; }
+
+		private void Btn_ApplyDivisions_Click(object sender, RoutedEventArgs e)
+		{
+			blocks = null;
+			var forceCalc = Blocks.ToString();
+			DrawDensity();
+		}
+
+		public int SectLon { get => DivLon + 1; }
+
+
+		private ObservableCollection<Models.Block> blocks;
+		public ObservableCollection<Models.Block> Blocks
+		{
+			get
+			{
+				if (blocks == null)
+				{
+					blocks = new ObservableCollection<Models.Block>();
+					var latRange = Math.Abs(LatTop - LatBottom);
+					var lonRange = Math.Abs(LonLeft - LonRight);
+					for (int i = 0; i < DivLon + 1; i++)
+					{
+						for (int j = 0; j < DivLat + 1; j++)
+						{
+							var block = new Models.Block();
+							block.LatTop = LatTop - (j * latRange / SectLat);
+							block.LatBottom = LatTop - ((j + 1) * latRange / SectLat);
+							block.LonLeft = LonLeft + (i * lonRange / SectLon);
+							block.LonRight = LonLeft + ((i + 1) * lonRange / SectLon);
+							blocks.Add(block);
+						}
+					}
+				}
+				return blocks;
+			}
+		}
+
+		private void DrawDensity()
+		{
+			MainMap.Children.Clear();
+
+			foreach 
+			(var b in Blocks
+				.OrderByDescending(block => block.Density.GetDoubleResult())
+				.Take((int)Math.Ceiling(Blocks.Count() * Slider_TopPercent.Value / 100d))
+			)
+			{
+				MapPolygon polygon = new MapPolygon();
+				polygon.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Blue);
+				polygon.Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Green);
+				polygon.StrokeThickness = 4;
+				polygon.Opacity = 0.3;
+				polygon.Locations = b.LocationCellection;
+
+				MainMap.Children.Add(polygon);
+			}
+		}
 
 
 

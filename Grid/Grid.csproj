@@ -1072,9 +1072,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Block.cs" />
-    <Compile Include="Models\Brain.cs" />
+    <Compile Include="Models\BlockResults\Density.cs" />
+    <Compile Include="Models\BlockResults\Penetration.cs" />
+    <Compile Include="Models\IBlockResult.cs" />
     <Compile Include="Models\LiveRecord.cs" />
-    <Compile Include="Models\Territory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

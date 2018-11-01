@@ -10,11 +10,10 @@
         mc:Ignorable="d"
         Title="MainWindow"
         Height="350"
-        Width="525">
-    <Window.Resources>
-        <b:Brain x:Key="Brain" />
-    </Window.Resources>
-    <Grid DataContext="{StaticResource Brain}">
+        Width="525"
+        DataContext="{Binding ElementName=Main}">
+
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
@@ -25,31 +24,44 @@
                     <Label Content="Vertical Divisions:"
                            Width="125" />
                     <TextBox Width="25"
-                             Text="{Binding Path=HOL010.DivLon}" />
-                    <Button Name="btn_ApplyVertDivisions"
-                            Content="Apply" 
-                            Command="{Binding Path=ApplyLatDivisions}"/>
+                             Text="{Binding Path=DivLon}" />
                 </WrapPanel>
                 <WrapPanel>
                     <Label Content="Horizontal Divisions:"
                            Width="125" />
                     <TextBox Width="25" 
-                             Text="{Binding Path=HOL010.DivLat}" />
-                    <Button Name="btn_ApplyHoriDivisions"
-                            Content="Apply"
-                            Command="{Binding Path=ApplyLonDivisions}"/>
+                             Text="{Binding Path=DivLat}" />
                 </WrapPanel>
             </StackPanel>
             <StackPanel Name="sp_DivisionsButton">
-   
+                <Button Name="Btn_ApplyDivisions"
+                        Content="Apply"
+                        Height="50"
+                        Click="Btn_ApplyDivisions_Click" />
+            </StackPanel>
+            <StackPanel Width="300">
+                <WrapPanel>
+                    <Label Content="Top Percent" />
+                    <TextBox Text="{Binding ElementName=Slider_TopPercent, Path=Value}" Width="40"/>
+                    <Slider Maximum="100"
+                            Minimum="0"
+                            Name="Slider_TopPercent"
+                            TickFrequency="1"
+                            TickPlacement="BottomRight"
+                            IsSnapToTickEnabled="True"
+                            Value="{Binding Path=TopPercent}" />
+                </WrapPanel>
+               
+              
             </StackPanel>
         </WrapPanel>
         <m:Map Name="MainMap"
                Grid.Row="1"
                CredentialsProvider="Atu4AQp2CNh0a2jeTlH3PwPWtCV-DyjxvTL2f4k2COQmV6407he4vlP2aJw9fZju"
                ZoomLevel="16"
-               Center="{Binding Path=HOL010.Center}">
-
+               Center="{Binding Path=Center}">
+            <m:MapLayer Name="Density" />
+            <m:MapLayer Name="Penetration" />
         </m:Map>
     </Grid>
 </Window>
