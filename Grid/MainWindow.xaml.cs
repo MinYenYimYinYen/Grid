@@ -1,9 +1,12 @@
 ﻿using Grid.Models;
 using Microsoft.Maps.MapControl.WPF;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 
 namespace Grid
@@ -177,7 +180,11 @@ namespace Grid
 		{
 			blocks = null;
 			var forceCalc = Blocks.ToString();
-			DrawDensity();
+			DrawGrid();
+		}
+		private void Btn_ClearDivisions_Click(object sender, RoutedEventArgs e)
+		{
+			DeleteBlock("block");
 		}
 
 		public int SectLon { get => DivLon + 1; }
@@ -210,29 +217,185 @@ namespace Grid
 			}
 		}
 
-		private void DrawDensity()
+
+		public bool showGrid;
+		public bool ShowGrid
 		{
-			MainMap.Children.Clear();
-
-			foreach 
-			(var b in Blocks
-				.OrderByDescending(block => block.Density.GetDoubleResult())
-				.Take((int)Math.Ceiling(Blocks.Count() * Slider_TopPercent.Value / 100d))
-			)
+			get
 			{
+				return showGrid;
+			}
+			set
+			{
+				if (value == false)
+				{
+					Hide();
+				}
+				else
+				{
+					RevealBlock("Grid");
+				}
+				showGrid = value;
+			}
+		}
+		private void DrawGrid()
+		{
+			int i = 0;
+			foreach (var b in Blocks)
+			{
+				i++;
 				MapPolygon polygon = new MapPolygon();
-				polygon.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Blue);
-				polygon.Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Green);
-				polygon.StrokeThickness = 4;
-				polygon.Opacity = 0.3;
+				polygon.Name = "block" + i.ToString();
+				polygon.Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Black);
+				polygon.StrokeThickness = 1;
 				polygon.Locations = b.LocationCellection;
-
 				MainMap.Children.Add(polygon);
 			}
 		}
 
 
 
+		private double gridOpacity;
+		public double GridOpacity
+		{
+			get
+			{
+				return gridOpacity;
+			}
+			set
+			{
+				gridOpacity = value;
+				AlterOpacity("block", value);
+			}
+		}
 
+		private double densityOpacity;
+		public double DensityOpacity
+		{
+			get { return densityOpacity; }
+			set
+			{
+				densityOpacity = value;
+				AlterOpacity("density", value);
+			}
+		}
+
+
+		private void DrawDensity()
+		{
+			int i = 0;
+			var selectionFormula = (int)Math.Ceiling(Blocks.Count() * (Slider_TopPercent.Value) / 100d);
+			var topRecords = Blocks
+				.OrderByDescending(block => block.Density.GetDoubleResult())
+				.Take(selectionFormula);
+			foreach (var b in topRecords)
+			{
+				i++;
+				MapPolygon polygon = new MapPolygon();
+				polygon.Name = "density" + i.ToString();
+				polygon.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Blue);
+
+				DensityOpacity = 0.3;
+				polygon.Locations = b.LocationCellection;
+				polygon.Visibility = ShowDensity == true ? Visibility.Visible : Visibility.Hidden;
+				MainMap.Children.Add(polygon);
+			}
+
+		}
+
+		public bool showDensity = true;
+		public bool ShowDensity
+		{
+			get
+			{
+				return showDensity;
+			}
+			set
+			{
+				if (value == false)
+				{
+					HideBlock("density");
+				}
+				else
+				{
+					RevealBlock("density");
+				}
+				showDensity = value;
+			}
+		}
+
+		private void btn_FillDensity_Click(object sender, RoutedEventArgs e)
+		{
+			DrawDensity();
+		}
+
+		private void btn_ClearDensity_Click(object sender, RoutedEventArgs e)
+		{
+			DeleteBlock("density");
+		}
+
+
+		private void HideBlock(string blockType)
+		{
+			foreach (var poly in MainMap.Children)
+			{
+				if (poly.GetType() == typeof(MapPolygon))
+				{
+					var pgon = (MapPolygon)poly;
+					if (pgon.Name.Contains(blockType))
+					{
+						pgon.Visibility = Visibility.Collapsed;
+					}
+				}
+			}
+		}
+
+		private void RevealBlock(string blockType)
+		{
+			foreach (var poly in MainMap.Children)
+			{
+				if (poly.GetType() == typeof(MapPolygon))
+				{
+					var pgon = (MapPolygon)poly;
+					if (pgon.Name.Contains(blockType))
+					{
+						pgon.Visibility = Visibility.Visible;
+					}
+				}
+			}
+		}
+
+		private void DeleteBlock(string blockType)
+		{
+			List<UIElement> targets = new List<UIElement>();
+			foreach (var poly in MainMap.Children)
+			{
+				if (poly.GetType() == typeof(MapPolygon))
+				{
+					var pgon = (MapPolygon)poly;
+					if (pgon.Name.Contains(blockType))
+					{
+						targets.Add(pgon);
+					}
+				}
+			}
+
+			foreach (var t in targets) MainMap.Children.Remove(t);
+		}
+
+		private void AlterOpacity(string blockType, double value)
+		{
+			foreach (var b in MainMap.Children)
+			{
+				if (b.GetType() == typeof(MapPolygon))
+				{
+					var p = (MapPolygon)b;
+					if (p.Name.Contains(blockType))
+					{
+						p.Opacity = value;
+					}
+				}
+			}
+		}
 	}
 }

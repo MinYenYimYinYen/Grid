@@ -18,9 +18,7 @@ namespace Grid.Models.BlockResults
 		private Block block;
 
 
-		public IEnumerable<LiveRecord> FullSet =>  MainWindow.LiveRecords
-			.Where(r=>r.Latitude <= block.LatTop && r.Latitude > block.LatBottom)
-			.Where(r=>r.Longitude >=block.LonLeft && r.Longitude < block.LonRight).ToList();
+		public IEnumerable<LiveRecord> FullSet => block.FullSet;
 
 		public IEnumerable<LiveRecord> Hits => FullSet;
 

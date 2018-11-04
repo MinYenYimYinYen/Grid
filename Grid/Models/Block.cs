@@ -38,6 +38,21 @@ namespace Grid.Models
 		#endregion
 
 		#region DataStuff
+		private IEnumerable<LiveRecord> fullSet;
+		public IEnumerable<LiveRecord> FullSet
+		{
+			get
+			{
+				if (fullSet == null)
+				{
+					fullSet = MainWindow.LiveRecords
+					.Where(r => r.Latitude <= LatTop && r.Latitude > LatBottom)
+					.Where(r => r.Longitude >= LonLeft && r.Longitude < LonRight).ToList();
+				}
+				return fullSet;
+			}
+		}
+
 		public Density Density => new Density(this);
 
 
