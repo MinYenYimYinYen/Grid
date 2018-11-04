@@ -13,7 +13,7 @@ namespace Grid.Models
 		double GetDoubleResult();
 		IEnumerable<LiveRecord> FullSet { get; }
 		IEnumerable<LiveRecord> Hits { get; }
-
+		string blockType();
 		
 	}
 }

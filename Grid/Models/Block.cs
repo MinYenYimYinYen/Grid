@@ -48,12 +48,14 @@ namespace Grid.Models
 					fullSet = MainWindow.LiveRecords
 					.Where(r => r.Latitude <= LatTop && r.Latitude > LatBottom)
 					.Where(r => r.Longitude >= LonLeft && r.Longitude < LonRight).ToList();
+
 				}
 				return fullSet;
 			}
 		}
 
 		public Density Density => new Density(this);
+		public Penetration Penetration => new Penetration(this);
 
 
 		#endregion

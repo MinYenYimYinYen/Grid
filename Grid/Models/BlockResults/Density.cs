@@ -26,5 +26,10 @@ namespace Grid.Models.BlockResults
 		{
 			return FullSet.Count();
 		}
+
+		public string blockType()
+		{
+			return "density";
+		}
 	}
 }

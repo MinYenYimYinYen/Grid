@@ -5,29 +5,33 @@
 			<RowDefinition />
 		</Grid.RowDefinitions>
 		<WrapPanel Name="wp_Top">
-			<StackPanel Name="sp_Divisions">
-				<WrapPanel>
-					<Label Content="Vertical Divisions:" Width="125" />
-					<TextBox Width="25" Text="{Binding Path=DivLon}" />
-				</WrapPanel>
-				<WrapPanel>
-					<Label Content="Horizontal Divisions:" Width="125" />
-					<TextBox Width="25" Text="{Binding Path=DivLat}" />
-				</WrapPanel>
-				<Slider Name="sld_GridOpacity" Minimum="0" Maximum="1" Width="100" Value="{Binding Path=GridOpacity}" />
-			</StackPanel>
-			<StackPanel Name="sp_DivisionsButton">
-				<Button Name="Btn_ApplyDivisions" Content="Create Gridlines" Click="Btn_ApplyDivisions_Click" />
-				<Button Name="Btn_ClearDivisions" Content="Clear Gridlines" Click="Btn_ClearDivisions_Click" />
-			</StackPanel>
+			<Button Content="Toggle Map" Click="Button_Click" />
+			<WrapPanel>
+				<StackPanel Name="sp_Divisions">
+					<CheckBox Content="Show Divisions" Name="cbox_ShowDivisions" IsChecked="{Binding Path=ShowBlock}" />
+					<WrapPanel>
+						<Label Content="Vertical Divisions:" Width="125" />
+						<TextBox Width="25" Text="{Binding Path=DivLon}" />
+					</WrapPanel>
+					<WrapPanel>
+						<Label Content="Horizontal Divisions:" Width="125" />
+						<TextBox Width="25" Text="{Binding Path=DivLat}" />
+					</WrapPanel>
+					<Slider Name="sld_GridOpacity" Minimum="0" Maximum="1" Width="100" Value="{Binding Path=GridOpacity}" />
+				</StackPanel>
+				<StackPanel Name="sp_DivisionsButton">
+					<Button Name="Btn_ApplyDivisions" Content="Create Gridlines" Click="Btn_ApplyDivisions_Click" />
+					<Button Name="Btn_ClearDivisions" Content="Clear Gridlines" Click="Btn_ClearDivisions_Click" />
+				</StackPanel>
+			</WrapPanel>
 			<StackPanel>
 				<StackPanel>
 					<CheckBox Content="Show Density" IsChecked="{Binding Path=ShowDensity}" />
 					<WrapPanel>
 						<Label Content="Top Percent" />
-						<TextBox Name="txt_TopPercentDensity" Text="{Binding Path=TopPercent}" Width="40" />
-						<Slider Name="Slider_TopPercent" Minimum="0" Maximum="100" 
-										Width="100" Value="{Binding ElementName=txt_TopPercentDensity, Path=Text}" Visibility="Collapsed" />
+						<TextBox Name="txt_TopPercentDensity" Text="{Binding Path=TopPercent_Density}" Width="40" />
+						<Slider Name="Slider_TopPercent_Density" Minimum="0" Maximum="100" Width="100" 
+										Value="{Binding ElementName=txt_TopPercentDensity, Path=Text}" Visibility="Collapsed" />
 					</WrapPanel>
 					<WrapPanel>
 						<Button Name="btn_FillDensity" Content="Fill Density" Click="btn_FillDensity_Click" />
@@ -36,7 +40,23 @@
 					<Slider Name="sld_DensityOpacity" Minimum="0" Maximum="1" Value="{Binding Path=DensityOpacity}" />
 				</StackPanel>
 			</StackPanel>
+			<StackPanel>
+				<StackPanel>
+					<CheckBox Content="Show Penetration" IsChecked="{Binding Path=ShowPenetration}" />
+					<WrapPanel>
+						<Label Content="Top Percent" />
+						<TextBox Name="txt_TopPercentPenetration" Text="{Binding Path=TopPercent_Penetration}" Width="40" />
+						<Slider Name="Slider_TopPercent_Pentetration" Minimum="0" Maximum="100" Width="100" Value="{Binding ElementName=txt_TopPercentPenetration, Path=Text}" Visibility="Collapsed" />
+					</WrapPanel>
+					<WrapPanel>
+						<Button Name="btn_FillPenetration" Content="Fill Penetration" Click="btn_FillPenetration_Click" />
+						<Button Name="btn_ClearPenetration" Content="Clear Penetration" Click="btn_ClearPenetration_Click" />
+					</WrapPanel>
+					<Slider Name="sld_PenetrationOpacity" Minimum="0" Maximum="1" Value="{Binding Path=PenetrationOpacity}" />
+				</StackPanel>
+			</StackPanel>
 		</WrapPanel>
-		<m:Map Name="MainMap" Grid.Row="1" CredentialsProvider="Atu4AQp2CNh0a2jeTlH3PwPWtCV-DyjxvTL2f4k2COQmV6407he4vlP2aJw9fZju" ZoomLevel="16" Center="{Binding Path=Center}"></m:Map>
+		<m:Map Name="MainMap" Grid.Row="1" CredentialsProvider="Atu4AQp2CNh0a2jeTlH3PwPWtCV-DyjxvTL2f4k2COQmV6407he4vlP2aJw9fZju"				
+					 ZoomLevel="16" Center="{Binding Path=Center}"></m:Map>
 	</Grid>
 </Window>

@@ -63,6 +63,21 @@ namespace Grid
 			}
 		}
 
+		private bool mapModeToggler = false;
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			if (!mapModeToggler)
+			{
+				MainMap.Mode = new AerialMode();
+				mapModeToggler = true;
+			}
+			else
+			{
+				MainMap.Mode = new RoadMode();
+				mapModeToggler = false;
+			}
+		}
+
 
 		private double? latTop;
 		public double LatTop
@@ -174,8 +189,6 @@ namespace Grid
 			}
 		}
 
-		public double TopPercent { get; set; }
-
 		private void Btn_ApplyDivisions_Click(object sender, RoutedEventArgs e)
 		{
 			blocks = null;
@@ -253,7 +266,26 @@ namespace Grid
 			}
 		}
 
-
+		public bool showBlock = true;
+		public bool ShowBlock
+		{
+			get
+			{
+				return showBlock;
+			}
+			set
+			{
+				if (value == false)
+				{
+					HideBlock("block");
+				}
+				else
+				{
+					RevealBlock("block");
+				}
+				showBlock = value;
+			}
+		}
 
 		private double gridOpacity;
 		public double GridOpacity
@@ -280,29 +312,6 @@ namespace Grid
 			}
 		}
 
-
-		private void DrawDensity()
-		{
-			int i = 0;
-			var selectionFormula = (int)Math.Ceiling(Blocks.Count() * (Slider_TopPercent.Value) / 100d);
-			var topRecords = Blocks
-				.OrderByDescending(block => block.Density.GetDoubleResult())
-				.Take(selectionFormula);
-			foreach (var b in topRecords)
-			{
-				i++;
-				MapPolygon polygon = new MapPolygon();
-				polygon.Name = "density" + i.ToString();
-				polygon.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Blue);
-
-				DensityOpacity = 0.3;
-				polygon.Locations = b.LocationCellection;
-				polygon.Visibility = ShowDensity == true ? Visibility.Visible : Visibility.Hidden;
-				MainMap.Children.Add(polygon);
-			}
-
-		}
-
 		public bool showDensity = true;
 		public bool ShowDensity
 		{
@@ -324,6 +333,41 @@ namespace Grid
 			}
 		}
 
+		private double penetrationOpacity;
+		public double PenetrationOpacity
+		{
+			get { return penetrationOpacity; }
+			set
+			{
+				penetrationOpacity = value;
+				AlterOpacity("penetration", value);
+			}
+		}
+
+		public bool showPenetration = true;
+		public bool ShowPenetration
+		{
+			get
+			{
+				return showPenetration;
+			}
+			set
+			{
+				if (value == false)
+				{
+					HideBlock("penetration");
+				}
+				else
+				{
+					RevealBlock("penetration");
+				}
+				showPenetration = value;
+			}
+		}
+
+		public double TopPercent_Density { get; set; }
+		public double TopPercent_Penetration { get; set; }
+
 		private void btn_FillDensity_Click(object sender, RoutedEventArgs e)
 		{
 			DrawDensity();
@@ -333,6 +377,87 @@ namespace Grid
 		{
 			DeleteBlock("density");
 		}
+
+		private void btn_FillPenetration_Click(object sender, RoutedEventArgs e)
+		{
+			DrawPenetration();
+		}
+
+		private void btn_ClearPenetration_Click(object sender, RoutedEventArgs e)
+		{
+			DeleteBlock("penetration");
+		}
+
+
+		private void DrawDensity()
+		{
+			int i = 0;
+			var selectionFormula = (int)Math.Ceiling(Blocks.Count() * (Slider_TopPercent_Density.Value) / 100d);
+			var topRecords = Blocks
+				.OrderByDescending(block => block.Density.GetDoubleResult())
+				.Take(selectionFormula);
+			foreach (var b in topRecords)
+			{
+				i++;
+				MapPolygon polygon = new MapPolygon();
+				polygon.Name = "density" + i.ToString();
+				polygon.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Blue);
+
+				DensityOpacity = 0.3;
+				polygon.Locations = b.LocationCellection;
+				polygon.Visibility = ShowDensity == true ? Visibility.Visible : Visibility.Hidden;
+				MainMap.Children.Add(polygon);
+			}
+
+		}
+		private void DrawPenetration()
+		{
+			int i = 0;
+			var selectionFormula = (int)Math.Ceiling(Blocks.Count() * (Slider_TopPercent_Pentetration.Value) / 100d);
+			var topRecords = Blocks
+				.OrderByDescending(block => block.Penetration.GetDoubleResult())
+				.Take(selectionFormula);
+			foreach (var b in topRecords)
+			{
+				i++;
+				MapPolygon polygon = new MapPolygon();
+				polygon.Name = "penetration" + i.ToString();
+				polygon.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Red);
+
+				PenetrationOpacity = 0.3;
+				polygon.Locations = b.LocationCellection;
+				polygon.Visibility = ShowPenetration == true ? Visibility.Visible : Visibility.Hidden;
+				MainMap.Children.Add(polygon);
+			}
+
+		}
+
+
+		//private void DrawDensity(IBlockResult blockResult)
+		//{
+		//	int i = 0;
+		//	var selectionFormula = (int)Math.Ceiling(Blocks.Count() * (Slider_TopPercent.Value) / 100d);
+		//	var topRecords = Blocks
+		//		.OrderByDescending(block => blockResult.GetDoubleResult())
+		//		.Take(selectionFormula);
+		//	foreach (var b in topRecords)
+		//	{
+		//		i++;
+		//		MapPolygon polygon = new MapPolygon();
+		//		polygon.Name = blockResult.blockType() + i.ToString();
+		//		polygon.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Blue);
+
+		//		DensityOpacity = 0.3;
+		//		polygon.Locations = b.LocationCellection;
+		//		polygon.Visibility = ShowDensity == true ? Visibility.Visible : Visibility.Hidden;
+		//		MainMap.Children.Add(polygon);
+		//	}
+
+		//}
+
+
+
+
 
 
 		private void HideBlock(string blockType)
@@ -397,5 +522,7 @@ namespace Grid
 				}
 			}
 		}
+
+
 	}
 }

@@ -25,5 +25,10 @@ namespace Grid.Models.BlockResults
 		{
 			return (double)Hits.Count() / (double)FullSet.Count();
 		}
+
+		public string blockType()
+		{
+			return "penetration";
+		}
 	}
 }
