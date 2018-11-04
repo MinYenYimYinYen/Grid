@@ -19,18 +19,6 @@ namespace Grid
 		public MainWindow()
 		{
 			InitializeComponent();
-
-			//MapPolygon polygon = new MapPolygon();
-			//polygon.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Blue);
-			//polygon.Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Green);
-			//polygon.StrokeThickness = 5;
-			//polygon.Opacity = 0.7;
-			//polygon.Locations = new LocationCollection() {
-			//	new Location(47.6424,-122.3219),
-			//	new Location(47.8424,-122.1747),
-			//	new Location(47.5814,-122.1747)};
-
-			//MainMap.Children.Add(polygon);
 		}
 
 
@@ -47,14 +35,16 @@ namespace Grid
 
 					//Add Live Records for customer table where latitude is valid
 					foreach (var rec in sa.customers
-						.Where(c => c.latitude != 0 && c.latitude != null && c.longitude != 0 && c.longitude != null))
+						.Where(c => c.latitude != 0 && c.latitude != null && c.longitude != 0 && c.longitude != null)
+						.Where(c=>(c.size == 0 || c.size == 0.07m || c.size >=1) && c.size<=699))
 					{
 						liveRecords.Add(new LiveRecord(rec));
 					}
 
 					//And again for markcust table
 					foreach (var rec in sa.markcusts
-						.Where(c => c.latitude != 0 && c.latitude != null && c.longitude != 0 && c.longitude != null))
+						.Where(c => c.latitude != 0 && c.latitude != null && c.longitude != 0 && c.longitude != null)
+						.Where(c => (c.size == 0 || c.size == 0.07m || c.size >= 1) && c.size <= 699))
 					{
 						liveRecords.Add(new LiveRecord(rec));
 					}
@@ -301,6 +291,7 @@ namespace Grid
 			}
 		}
 
+		#region Density
 		private double densityOpacity;
 		public double DensityOpacity
 		{
@@ -333,40 +324,7 @@ namespace Grid
 			}
 		}
 
-		private double penetrationOpacity;
-		public double PenetrationOpacity
-		{
-			get { return penetrationOpacity; }
-			set
-			{
-				penetrationOpacity = value;
-				AlterOpacity("penetration", value);
-			}
-		}
-
-		public bool showPenetration = true;
-		public bool ShowPenetration
-		{
-			get
-			{
-				return showPenetration;
-			}
-			set
-			{
-				if (value == false)
-				{
-					HideBlock("penetration");
-				}
-				else
-				{
-					RevealBlock("penetration");
-				}
-				showPenetration = value;
-			}
-		}
-
 		public double TopPercent_Density { get; set; }
-		public double TopPercent_Penetration { get; set; }
 
 		private void btn_FillDensity_Click(object sender, RoutedEventArgs e)
 		{
@@ -377,17 +335,6 @@ namespace Grid
 		{
 			DeleteBlock("density");
 		}
-
-		private void btn_FillPenetration_Click(object sender, RoutedEventArgs e)
-		{
-			DrawPenetration();
-		}
-
-		private void btn_ClearPenetration_Click(object sender, RoutedEventArgs e)
-		{
-			DeleteBlock("penetration");
-		}
-
 
 		private void DrawDensity()
 		{
@@ -410,6 +357,49 @@ namespace Grid
 			}
 
 		}
+		#endregion
+
+		#region Penetration
+		private double penetrationOpacity;
+		public double PenetrationOpacity
+		{
+			get { return penetrationOpacity; }
+			set
+			{
+				penetrationOpacity = value;
+				AlterOpacity("penetration", value);
+			}
+		}
+		public bool showPenetration = true;
+		public bool ShowPenetration
+		{
+			get
+			{
+				return showPenetration;
+			}
+			set
+			{
+				if (value == false)
+				{
+					HideBlock("penetration");
+				}
+				else
+				{
+					RevealBlock("penetration");
+				}
+				showPenetration = value;
+			}
+		}
+		public double TopPercent_Penetration { get; set; }
+		private void btn_FillPenetration_Click(object sender, RoutedEventArgs e)
+		{
+			DrawPenetration();
+		}
+
+		private void btn_ClearPenetration_Click(object sender, RoutedEventArgs e)
+		{
+			DeleteBlock("penetration");
+		}
 		private void DrawPenetration()
 		{
 			int i = 0;
@@ -431,31 +421,7 @@ namespace Grid
 			}
 
 		}
-
-
-		//private void DrawDensity(IBlockResult blockResult)
-		//{
-		//	int i = 0;
-		//	var selectionFormula = (int)Math.Ceiling(Blocks.Count() * (Slider_TopPercent.Value) / 100d);
-		//	var topRecords = Blocks
-		//		.OrderByDescending(block => blockResult.GetDoubleResult())
-		//		.Take(selectionFormula);
-		//	foreach (var b in topRecords)
-		//	{
-		//		i++;
-		//		MapPolygon polygon = new MapPolygon();
-		//		polygon.Name = blockResult.blockType() + i.ToString();
-		//		polygon.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Blue);
-
-		//		DensityOpacity = 0.3;
-		//		polygon.Locations = b.LocationCellection;
-		//		polygon.Visibility = ShowDensity == true ? Visibility.Visible : Visibility.Hidden;
-		//		MainMap.Children.Add(polygon);
-		//	}
-
-		//}
-
-
+		#endregion
 
 
 
