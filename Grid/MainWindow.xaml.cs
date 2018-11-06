@@ -343,12 +343,16 @@ namespace Grid
 			var topRecords = Blocks
 				.OrderByDescending(block => block.Density.GetDoubleResult())
 				.Take(selectionFormula);
+			var allRecords = Blocks
+					.OrderByDescending(block => block.Density.GetDoubleResult()).ToList();
+			var max = allRecords.Select(r => r.Density.GetDoubleResult()).Max();
+			var min = allRecords.Select(r => r.Density.GetDoubleResult()).Min();
 			foreach (var b in topRecords)
 			{
 				i++;
 				MapPolygon polygon = new MapPolygon();
 				polygon.Name = "density" + i.ToString();
-				polygon.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Blue);
+				polygon.Fill = new Gradiator(min,max,b.Density.GetDoubleResult()).SolidColorBrush;
 
 				DensityOpacity = 0.3;
 				polygon.Locations = b.LocationCellection;
@@ -403,20 +407,302 @@ namespace Grid
 		private void DrawPenetration()
 		{
 			int i = 0;
-			var selectionFormula = (int)Math.Ceiling(Blocks.Count() * (Slider_TopPercent_Pentetration.Value) / 100d);
+			var selectionFormula = (int)Math.Ceiling(Blocks.Count() * (Slider_TopPercent_Penetration.Value) / 100d);
 			var topRecords = Blocks
 				.OrderByDescending(block => block.Penetration.GetDoubleResult())
 				.Take(selectionFormula);
+			var allRecords = Blocks
+					.OrderByDescending(block => block.Penetration.GetDoubleResult()).ToList();
+			var max = allRecords.Select(r => r.Penetration.GetDoubleResult()).Max();
+			var min = allRecords.Select(r => r.Penetration.GetDoubleResult()).Min();
 			foreach (var b in topRecords)
 			{
 				i++;
 				MapPolygon polygon = new MapPolygon();
 				polygon.Name = "penetration" + i.ToString();
-				polygon.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Red);
+				polygon.Fill = new Gradiator(min,max,b.Penetration.GetDoubleResult()).SolidColorBrush;
 
 				PenetrationOpacity = 0.3;
 				polygon.Locations = b.LocationCellection;
 				polygon.Visibility = ShowPenetration == true ? Visibility.Visible : Visibility.Hidden;
+				MainMap.Children.Add(polygon);
+			}
+
+		}
+		#endregion
+
+		#region Penetration124
+		private double penetration124Opacity;
+		public double Penetration124Opacity
+		{
+			get { return penetration124Opacity; }
+			set
+			{
+				penetration124Opacity = value;
+				AlterOpacity("penetration124", value);
+			}
+		}
+		public bool showPenetration124 = true;
+		public bool ShowPenetration124
+		{
+			get
+			{
+				return showPenetration124;
+			}
+			set
+			{
+				if (value == false)
+				{
+					HideBlock("penetration124");
+				}
+				else
+				{
+					RevealBlock("penetration124");
+				}
+				showPenetration124 = value;
+			}
+		}
+		public double TopPercent_Penetration124 { get; set; }
+		private void btn_FillPenetration124_Click(object sender, RoutedEventArgs e)
+		{
+			DrawPenetration124();
+		}
+
+		private void btn_ClearPenetration124_Click(object sender, RoutedEventArgs e)
+		{
+			DeleteBlock("penetration124");
+		}
+		private void DrawPenetration124()
+		{
+			int i = 0;
+			var selectionFormula = (int)Math.Ceiling(Blocks.Count() * (Slider_TopPercent_Penetration124.Value) / 100d);
+			var topRecords = Blocks
+				.OrderByDescending(block => block.Penetration124.GetDoubleResult())
+				.Take(selectionFormula);
+			var allRecords = Blocks
+					.OrderByDescending(block => block.Penetration124.GetDoubleResult()).ToList();
+			var max = allRecords.Select(r => r.Penetration124.GetDoubleResult()).Max();
+			var min = allRecords.Select(r => r.Penetration124.GetDoubleResult()).Min();
+			foreach (var b in topRecords)
+			{
+				i++;
+				MapPolygon polygon = new MapPolygon();
+				polygon.Name = "penetration124" + i.ToString();
+				polygon.Fill = new Gradiator(min, max, b.Penetration124.GetDoubleResult()).SolidColorBrush;
+
+				Penetration124Opacity = 0.3;
+				polygon.Locations = b.LocationCellection;
+				polygon.Visibility = ShowPenetration124 == true ? Visibility.Visible : Visibility.Hidden;
+				MainMap.Children.Add(polygon);
+			}
+
+		}
+		#endregion
+
+		#region PenetrationLargeLawn
+		private double penetrationLargeLawnOpacity;
+		public double PenetrationLargeLawnOpacity
+		{
+			get { return penetrationLargeLawnOpacity; }
+			set
+			{
+				penetrationLargeLawnOpacity = value;
+				AlterOpacity("penetrationLargeLawn", value);
+			}
+		}
+		public bool showPenetrationLargeLawn = true;
+		public bool ShowPenetrationLargeLawn
+		{
+			get
+			{
+				return showPenetrationLargeLawn;
+			}
+			set
+			{
+				if (value == false)
+				{
+					HideBlock("penetrationLargeLawn");
+				}
+				else
+				{
+					RevealBlock("penetrationLargeLawn");
+				}
+				showPenetrationLargeLawn = value;
+			}
+		}
+		public double TopPercent_PenetrationLargeLawn { get; set; }
+		private void btn_FillPenetrationLargeLawn_Click(object sender, RoutedEventArgs e)
+		{
+			DrawPenetrationLargeLawn();
+		}
+
+		private void btn_ClearPenetrationLargeLawn_Click(object sender, RoutedEventArgs e)
+		{
+			DeleteBlock("penetrationLargeLawn");
+		}
+		private void DrawPenetrationLargeLawn()
+		{
+			int i = 0;
+			var selectionFormula = (int)Math.Ceiling(Blocks.Count() * (Slider_TopPercent_PenetrationLargeLawn.Value) / 100d);
+			var topRecords = Blocks
+				.OrderByDescending(block => block.PenetrationLargeLawn.GetDoubleResult())
+				.Take(selectionFormula);
+			var allRecords = Blocks
+					.OrderByDescending(block => block.PenetrationLargeLawn.GetDoubleResult()).ToList();
+			var max = allRecords.Select(r => r.PenetrationLargeLawn.GetDoubleResult()).Max();
+			var min = allRecords.Select(r => r.PenetrationLargeLawn.GetDoubleResult()).Min();
+			foreach (var b in topRecords)
+			{
+				i++;
+				MapPolygon polygon = new MapPolygon();
+				polygon.Name = "penetrationLargeLawn" + i.ToString();
+				polygon.Fill = new Gradiator(min, max, b.PenetrationLargeLawn.GetDoubleResult()).SolidColorBrush;
+
+				PenetrationLargeLawnOpacity = 0.3;
+				polygon.Locations = b.LocationCellection;
+				polygon.Visibility = ShowPenetrationLargeLawn == true ? Visibility.Visible : Visibility.Hidden;
+				
+				MainMap.Children.Add(polygon);
+			}
+
+		}
+		#endregion
+
+		#region Unmeasured
+		private double unmeasuredOpacity;
+		public double UnmeasuredOpacity
+		{
+			get { return unmeasuredOpacity; }
+			set
+			{
+				unmeasuredOpacity = value;
+				AlterOpacity("unmeasured", value);
+			}
+		}
+		public bool showUnmeasured = true;
+		public bool ShowUnmeasured
+		{
+			get
+			{
+				return showUnmeasured;
+			}
+			set
+			{
+				if (value == false)
+				{
+					HideBlock("unmeasured");
+				}
+				else
+				{
+					RevealBlock("unmeasured");
+				}
+				showUnmeasured = value;
+			}
+		}
+		public double TopPercent_Unmeasured { get; set; }
+		private void btn_FillUnmeasured_Click(object sender, RoutedEventArgs e)
+		{
+			DrawUnmeasured();
+		}
+
+		private void btn_ClearUnmeasured_Click(object sender, RoutedEventArgs e)
+		{
+			DeleteBlock("unmeasured");
+		}
+		private void DrawUnmeasured()
+		{
+			int i = 0;
+			var selectionFormula = (int)Math.Ceiling(Blocks.Count() * (Slider_TopPercent_Unmeasured.Value) / 100d);
+			var topRecords = Blocks
+				.OrderByDescending(block => block.Unmeasured.GetDoubleResult())
+				.Take(selectionFormula);
+			var allRecords = Blocks
+					.OrderByDescending(block => block.Unmeasured.GetDoubleResult()).ToList();
+			var max = allRecords.Select(r => r.Unmeasured.GetDoubleResult()).Max();
+			var min = allRecords.Select(r => r.Unmeasured.GetDoubleResult()).Min();
+			foreach (var b in topRecords)
+			{
+				i++;
+				MapPolygon polygon = new MapPolygon();
+				polygon.Name = "unmeasured" + i.ToString();
+				polygon.Fill = new Gradiator(min, max, b.Unmeasured.GetDoubleResult()).SolidColorBrush;
+
+				UnmeasuredOpacity = 0.3;
+				polygon.Locations = b.LocationCellection;
+				polygon.Visibility = ShowUnmeasured == true ? Visibility.Visible : Visibility.Hidden;
+				polygon.ToolTip = b.Unmeasured.GetDoubleResult().ToString();
+				MainMap.Children.Add(polygon);
+			}
+
+		}
+		#endregion
+
+		#region AverageSize
+		private double averageSizeOpacity;
+		public double AverageSizeOpacity
+		{
+			get { return averageSizeOpacity; }
+			set
+			{
+				averageSizeOpacity = value;
+				AlterOpacity("averageSize", value);
+			}
+		}
+		public bool showAverageSize = true;
+		public bool ShowAverageSize
+		{
+			get
+			{
+				return showAverageSize;
+			}
+			set
+			{
+				if (value == false)
+				{
+					HideBlock("averageSize");
+				}
+				else
+				{
+					RevealBlock("averageSize");
+				}
+				showAverageSize = value;
+			}
+		}
+		public double TopPercent_AverageSize { get; set; }
+		private void btn_FillAverageSize_Click(object sender, RoutedEventArgs e)
+		{
+			DrawAverageSize();
+		}
+
+		private void btn_ClearAverageSize_Click(object sender, RoutedEventArgs e)
+		{
+			DeleteBlock("averageSize");
+		}
+		private void DrawAverageSize()
+		{
+			int i = 0;
+			var selectionFormula = (int)Math.Ceiling(Blocks.Count() * (Slider_TopPercent_AverageSize.Value) / 100d);
+
+			var allRecords = Blocks
+				.OrderByDescending(block => block.AverageSize.GetDoubleResult()).ToList();
+
+
+			var max = allRecords.Select(r => r.AverageSize.GetDoubleResult()).Max();
+			var min = allRecords.Select(r => r.AverageSize.GetDoubleResult()).Min();
+
+			var topRecords = allRecords
+				.Take(selectionFormula);
+			foreach (var b in topRecords)
+			{
+				i++;
+				MapPolygon polygon = new MapPolygon();
+				polygon.Name = "averageSize" + i.ToString();
+				polygon.Fill = new Gradiator(min, max, b.AverageSize.GetDoubleResult()).SolidColorBrush;
+
+				AverageSizeOpacity = 0.3;
+				polygon.Locations = b.LocationCellection;
+				polygon.Visibility = ShowAverageSize == true ? Visibility.Visible : Visibility.Hidden;
+				polygon.ToolTip = b.AverageSize.GetDoubleResult().ToString();
 				MainMap.Children.Add(polygon);
 			}
 

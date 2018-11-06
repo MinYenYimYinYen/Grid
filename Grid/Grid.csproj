@@ -1078,6 +1078,8 @@
     <Compile Include="Models\BlockResults\Penetration124.cs" />
     <Compile Include="Models\BlockResults\PenetrationLargeLawn.cs" />
     <Compile Include="Models\BlockResults\Unmeasured.cs" />
+    <Compile Include="Models\WriteBlock.cs" />
+    <Compile Include="Models\Gradiator.cs" />
     <Compile Include="Models\IBlockResult.cs" />
     <Compile Include="Models\LiveRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

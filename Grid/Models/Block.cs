@@ -56,6 +56,10 @@ namespace Grid.Models
 
 		public Density Density => new Density(this);
 		public Penetration Penetration => new Penetration(this);
+		public Penetration124 Penetration124 => new Penetration124(this);
+		public PenetrationLargeLawn PenetrationLargeLawn => new PenetrationLargeLawn(this);
+		public Unmeasured Unmeasured => new Unmeasured(this);
+		public AverageSize AverageSize => new AverageSize(this);
 
 
 		#endregion

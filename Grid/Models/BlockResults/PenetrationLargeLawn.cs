@@ -29,6 +29,7 @@ namespace Grid.Models.BlockResults
 
 		public double GetDoubleResult()
 		{
+			if (FullSet.Count() == 0) return 0;
 			return (double)Hits.Count() / (double)FullSet.Count();
 		}
 	}
